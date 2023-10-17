@@ -1,4 +1,78 @@
-html {
-  height: 100%;
-  width: 100%;
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #0077b6;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}
+
+.cta-button {
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #0077b6;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #005073;
+}
+
+.features {
+  margin-top: 2rem;
+}
+
+.features h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  margin-bottom: 1rem;
+}
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 1rem;
 }
