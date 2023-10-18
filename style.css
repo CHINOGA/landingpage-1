@@ -109,3 +109,12 @@ i {
   font-size: 24px;
   margin-right: 10px;
 }
+/* Prevent text selection for the entire page */
+body {
+    user-select: none;
+}
+
+/* Allow text selection within elements having the 'copyPermittedClass' class */
+.copyPermittedClass {
+    user-select: text;
+}

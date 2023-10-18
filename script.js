@@ -3,47 +3,35 @@ function myFunction() {
   // Add any JavaScript code here
 }
 
-document.addEventListener("DOMContentLoaded", myFunction);
 // script.js
-// Self-invoking function to prevent global scope pollution
-(function(){
-  // Use 'use strict' to make code more robust and manageable
-  'use strict';
+function myFunction() {
+  // Add any JavaScript code here
+}
 
-  /**
-   * This is the main function where most logic for the website resides
-   */
-  const myFunction = () => {
-    // Add any JavaScript code here
-    // Example:
-    // Set up an event listener for a hypothetical button which does something when clicked
-    const someButton = document.getElementById('someButton');
-    if(someButton) {
-      someButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        console.log("Button is clicked!");
-      });
-    }
-  }
-  // Wait until document has fully loaded, then run myFunction
-  window.addEventListener("DOMContentLoaded", myFunction);
-})();
-// Disabling right click event
 document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
+    e.preventDefault();
 });
-// Disabling selection
-document.onselectstart = function() {
-  return false;
-};
 
+// Allow copying only for specific email addresses and phone numbers
+document.addEventListener('copy', function(e) {
+    const selectedText = window.getSelection().toString();
+    const permittedEmail = 'info@chinotrack.com';
+    const permittedPhoneNumber = '+255716959578';
+
+    if (selectedText !== permittedEmail && selectedText !== permittedPhoneNumber) {
+        e.preventDefault();
+    }
+});
+
+// Create "Back to Top" button
 const backToTopButton = document.createElement('button');
 backToTopButton.className = 'fa fa-arrow-up';
 backToTopButton.innerHTML = '';
 backToTopButton.id = 'backToTop';
-backToTopButton.style.display= 'none';
+backToTopButton.style.display = 'none';
 document.body.appendChild(backToTopButton);
 
+// Handle window scroll
 window.onscroll = function() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("backToTop").style.display = "block";
@@ -52,8 +40,8 @@ window.onscroll = function() {
   }
 }
 
+// Handle "Back to Top" button click
 document.getElementById('backToTop').addEventListener("click", function(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
-
