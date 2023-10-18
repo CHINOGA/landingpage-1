@@ -36,3 +36,24 @@ document.addEventListener('contextmenu', function(e) {
 document.onselectstart = function() {
   return false;
 };
+
+const backToTopButton = document.createElement('button');
+backToTopButton.className = 'fa fa-arrow-up';
+backToTopButton.innerHTML = '';
+backToTopButton.id = 'backToTop';
+backToTopButton.style.display= 'none';
+document.body.appendChild(backToTopButton);
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("backToTop").style.display = "block";
+  } else {
+    document.getElementById("backToTop").style.display = "none";
+  }
+}
+
+document.getElementById('backToTop').addEventListener("click", function(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
