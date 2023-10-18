@@ -110,9 +110,16 @@ i {
   margin-right: 10px;
 }
 /* Prevent text selection for the entire page */
+/* CSS code to prevent text selection */
+
 body {
-    user-select: none;
+    -webkit-user-select: none;  /* Chrome, Opera, Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE/Edge */
+    user-select: none;          /* Non-prefixed version, currently 
+                                  supported by Chrome, Opera and Firefox */
 }
+
 
 /* Allow text selection within elements having the 'copyPermittedClass' class */
 .copyPermittedClass {
