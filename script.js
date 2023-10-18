@@ -28,3 +28,11 @@ document.addEventListener("DOMContentLoaded", myFunction);
   // Wait until document has fully loaded, then run myFunction
   window.addEventListener("DOMContentLoaded", myFunction);
 })();
+// Disabling right click event
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+// Disabling selection
+document.onselectstart = function() {
+  return false;
+};
