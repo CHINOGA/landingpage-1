@@ -1,62 +1,55 @@
 /* style.css */
+
 body {
   font-family: Arial, sans-serif;
+  color: #666;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .header {
   background-color: #0077b6;
-  color: #ffffff;
   padding: 1rem;
   text-align: center;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  color: #ffffff;
 }
 
 h1 {
-  font-size: 2.5rem;
   color: #333;
-  text-align: center;
+  padding: 10px 0;
 }
 
-p {
-  font-size: 1.2rem;
-  color: #666;
-  text-align: center;
-}
+/* navigation */
 
 .cta-button {
   display: block;
   width: 200px;
+  height: 30px;
   margin: 2rem auto;
-  padding: 1rem 2rem;
-  background-color: #0077b6;
-  color: #ffffff;
+  background: #0077b6;
+  color: #fff;
   text-align: center;
-  text-decoration: none;
-  font-size: 1.2rem;
+  padding: 5px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  transition: background 0.4s ease-in;
 }
 
 .cta-button:hover {
-  background-color: #005073;
+  background: #005073;
 }
 
 .features {
-  margin-top: 2rem;
-}
-
-.features h2 {
-  font-size: 1.5rem;
-  text-align: center;
+  margin: 30px 0;
 }
 
 .features ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
@@ -64,41 +57,39 @@ p {
   margin-bottom: 1rem;
 }
 
+.contact h2, .features h2  {
+  color: #333;
+}
+
 .contact {
   margin-top: 2rem;
 }
 
-.contact h2 {
-  font-size: 1.5rem;
-  text-align: center;
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    width: 150px;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .features h2, .contact h2 {
+    font-size: 20px;
+  }
 }
 
-.contact p {
-  margin-bottom: 1rem;
+ul {
+  list-style-type: none;
 }
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 0.8rem;
-    }
-    .container {
-        padding: 1rem;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-    .cta-button {
-        width: 150px;
-        font-size: 1rem;
-    }
-    /* Adjusts the features heading size */
-    .features h2 {
-        font-size: 1.2rem;
-    }
-    /* Adjusts the contact heading size */
-    .contact h2 {
-        font-size: 1.2rem;
-    }
+
+div {
+  text-align: left;
+  padding: 0;
 }
