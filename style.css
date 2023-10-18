@@ -76,3 +76,29 @@ p {
 .contact p {
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.8rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .cta-button {
+        width: 150px;
+        font-size: 1rem;
+    }
+    /* Adjusts the features heading size */
+    .features h2 {
+        font-size: 1.2rem;
+    }
+    /* Adjusts the contact heading size */
+    .contact h2 {
+        font-size: 1.2rem;
+    }
+}
